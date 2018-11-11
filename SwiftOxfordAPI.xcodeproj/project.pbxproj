@@ -12,6 +12,7 @@
 		9476E0EC2198465F008D73DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9476E0EA2198465F008D73DA /* Main.storyboard */; };
 		9476E0EE21984662008D73DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9476E0ED21984662008D73DA /* Assets.xcassets */; };
 		9476E0F121984662008D73DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9476E0EF21984662008D73DA /* LaunchScreen.storyboard */; };
+		9476E0FA219846FB008D73DA /* SwiftOxfordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476E0F9219846FB008D73DA /* SwiftOxfordAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9476E0ED21984662008D73DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9476E0F021984662008D73DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9476E0F221984662008D73DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9476E0F9219846FB008D73DA /* SwiftOxfordAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOxfordAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		9476E0E52198465F008D73DA /* SwiftOxfordAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9476E0F8219846E6008D73DA /* Sources */,
 				9476E0E62198465F008D73DA /* AppDelegate.swift */,
 				9476E0E82198465F008D73DA /* ViewController.swift */,
 				9476E0EA2198465F008D73DA /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				9476E0F221984662008D73DA /* Info.plist */,
 			);
 			path = SwiftOxfordAPI;
+			sourceTree = "<group>";
+		};
+		9476E0F8219846E6008D73DA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9476E0F9219846FB008D73DA /* SwiftOxfordAPI.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				9476E0E92198465F008D73DA /* ViewController.swift in Sources */,
 				9476E0E72198465F008D73DA /* AppDelegate.swift in Sources */,
+				9476E0FA219846FB008D73DA /* SwiftOxfordAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
