@@ -40,7 +40,7 @@ public class SwiftOxfordAPI {
 		- Parameters:
 			- apiKey: A valid API key.
 	*/
-	public func start(_ appId: String, _ appKey: String) {
+	public func start(appId: String, appKey: String) {
 		self.appId = appId
 		self.appKey = appKey
 	}
