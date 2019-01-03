@@ -14,7 +14,6 @@ public class SwiftOxfordAPI {
 	/// Shared instance.
 	public static let shared = SwiftOxfordAPI()
 	
-	
 	/// API structure.
 	private struct API {
 		/// Base Oxford Dictionaries API url.
@@ -27,14 +26,14 @@ public class SwiftOxfordAPI {
 			static let url = API.base + "/" + entries.base
 		}
 	}
-	
+    
 	/// App identifier.
 	private var appId: String!
 	/// API key.
 	private var appKey: String!
 	/// Default URL session.
 	private let session = URLSession(configuration: .default)
-	
+    
 	/**
 		Initialization.
 	
@@ -45,23 +44,14 @@ public class SwiftOxfordAPI {
 		self.appId = appId
 		self.appKey = appKey
 	}
-	
+    
 	/*
 	*/
-	public func entries(_ language: String, _ word: String, _ source: String, _ format: String = "text", _ model: String = "base", _ completion: @escaping ((_ text: String?, _ error: Error?) -> Void)) {
-		guard var urlComponents = URLComponents(string: API.entries.url + "/" + language + "/" + word.lowercased()) else {
+	public func entries(_ language: String, _ word: String, _ completion: @escaping ((_ data: [String: Any]?, _ error: Error?) -> Void)) {
+        guard let urlComponents = URLComponents(string: API.entries.url + "/" + language + "/" + word.lowercased()) else {
 			completion(nil, nil)
 			return
 		}
-		
-//		var queryItems = [URLQueryItem]()
-//		queryItems.append(URLQueryItem(name: "key", value: apiKey))
-//		queryItems.append(URLQueryItem(name: "q", value: q))
-//		queryItems.append(URLQueryItem(name: "target", value: target))
-//		queryItems.append(URLQueryItem(name: "source", value: source))
-//		queryItems.append(URLQueryItem(name: "format", value: format))
-//		queryItems.append(URLQueryItem(name: "model", value: model))
-//		urlComponents.queryItems = queryItems
 		
 		guard let url = urlComponents.url else {
 			completion(nil, nil)
@@ -76,23 +66,25 @@ public class SwiftOxfordAPI {
 		
 		urlRequest.httpMethod = API.entries.method
 		
-		let task = session.dataTask(with: urlRequest) { (data, response, error) in
-			guard let data = data,								// is there data
-				let response = response as? HTTPURLResponse,	// is there HTTP response
-				(200 ..< 300) ~= response.statusCode,			// is statusCode 2XX
-				error == nil else {								// was there no error, otherwise ...
+		let task = session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
+            guard let strongSelf = self else {
+                return
+            }
+            
+			guard let data = data,
+				let response = response as? HTTPURLResponse,
+				(200 ..< 300) ~= response.statusCode,
+				error == nil else {
 					completion(nil, error)
 					return
 			}
 			
-			guard let object = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any]/*, let d = object["data"] as? [String: Any], let translations = d["translations"] as? [[String: String]], let translation = translations.first, let translatedText = translation["translatedText"]*/ else {
+			guard let object = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any] else {
 				completion(nil, error)
 				return
 			}
 			
-			print(object)
-			
-			completion("", nil)
+			completion(object, nil)
 		}
 		task.resume()
 	}

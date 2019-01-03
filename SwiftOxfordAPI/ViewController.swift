@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		SwiftOxfordAPI.shared.entries("en", "queen", "") { (text, error) in
-			
+		SwiftOxfordAPI.shared.entries("en", "queen") { (data, error) in
+			print(data)
 		}
 	}
 
