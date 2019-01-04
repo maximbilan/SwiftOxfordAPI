@@ -66,11 +66,7 @@ public class SwiftOxfordAPI {
 		
 		urlRequest.httpMethod = API.entries.method
 		
-		let task = session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
-            guard let strongSelf = self else {
-                return
-            }
-            
+		let task = session.dataTask(with: urlRequest) { (data, response, error) in
 			guard let data = data,
 				let response = response as? HTTPURLResponse,
 				(200 ..< 300) ~= response.statusCode,

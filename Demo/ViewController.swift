@@ -14,7 +14,13 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		SwiftOxfordAPI.shared.entries("en", "queen") { (data, error) in
-			print(data)
+            if let data = data {
+                print(data)
+            } else {
+                if let localizedDescr = error?.localizedDescription {
+                    print(localizedDescr)
+                }
+            }
 		}
 	}
 
