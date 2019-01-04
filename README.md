@@ -1,2 +1,2 @@
 # SwiftOxfordAPI
-A framework to use Oxford Dictionaries API written in Swift
+A framework to consume the <a href="https://developer.oxforddictionaries.com/documentation">Oxford Dictionaries API</a> written in Swift.
