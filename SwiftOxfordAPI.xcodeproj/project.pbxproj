@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9476E0E32198465F008D73DA /* SwiftOxfordAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOxfordAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9476E0E32198465F008D73DA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E6516721DF59BB00B5B42F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94E6516821DF59BB00B5B42F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94E6516A21DF59BB00B5B42F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		9476E0E42198465F008D73DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9476E0E32198465F008D73DA /* SwiftOxfordAPI.app */,
+				9476E0E32198465F008D73DA /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,9 +86,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9476E0E22198465F008D73DA /* SwiftOxfordAPI */ = {
+		9476E0E22198465F008D73DA /* Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9476E0F521984662008D73DA /* Build configuration list for PBXNativeTarget "SwiftOxfordAPI" */;
+			buildConfigurationList = 9476E0F521984662008D73DA /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
 				9476E0DF2198465F008D73DA /* Sources */,
 				9476E0E02198465F008D73DA /* Frameworks */,
@@ -98,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftOxfordAPI;
+			name = Demo;
 			productName = SwiftOxfordAPI;
-			productReference = 9476E0E32198465F008D73DA /* SwiftOxfordAPI.app */;
+			productReference = 9476E0E32198465F008D73DA /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9476E0E22198465F008D73DA /* SwiftOxfordAPI */,
+				9476E0E22198465F008D73DA /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -346,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9476E0F521984662008D73DA /* Build configuration list for PBXNativeTarget "SwiftOxfordAPI" */ = {
+		9476E0F521984662008D73DA /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9476E0F621984662008D73DA /* Debug */,
