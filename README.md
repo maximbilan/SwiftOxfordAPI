@@ -32,6 +32,21 @@ SwiftOxfordAPI.shared.start(appId: "APP_ID_HERE", appKey: "APP_KEY_HERE")
 
 ## Using
 
+Right now the framework supports only one request: `entries`. So, this repo is in working progress, don't worry, will be other stuff soon.
+
+## To do:
+
+- [x] Entries
+- [] Entries (Regions and filters)
+- [] Translation
+- [] Sentences
+- [] Lemmatron
+- [] Thesaurus
+- [] LexiStats
+- [] Search
+- [] Wordlist
+- [] Utility
+
 ## License
 
 <i>SwiftOxfordAPI</i> is available under the MIT license. See the LICENSE file for more info.
