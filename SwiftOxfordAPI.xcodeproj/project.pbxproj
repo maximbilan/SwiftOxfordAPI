@@ -13,6 +13,8 @@
 		94E6517521DF59BB00B5B42F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E6516B21DF59BB00B5B42F /* Main.storyboard */; };
 		94E6517621DF59BB00B5B42F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6516D21DF59BB00B5B42F /* AppDelegate.swift */; };
 		94E6517821DF59BB00B5B42F /* SwiftOxfordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6517121DF59BB00B5B42F /* SwiftOxfordAPI.swift */; };
+		94E6518221DF5BDE00B5B42F /* Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E6518021DF5BDE00B5B42F /* Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E6518621DF5C1300B5B42F /* SwiftOxfordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6517121DF59BB00B5B42F /* SwiftOxfordAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +26,20 @@
 		94E6516D21DF59BB00B5B42F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E6516E21DF59BB00B5B42F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94E6517121DF59BB00B5B42F /* SwiftOxfordAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftOxfordAPI.swift; sourceTree = "<group>"; };
+		94E6517E21DF5BDE00B5B42F /* Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E6518021DF5BDE00B5B42F /* Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Framework.h; sourceTree = "<group>"; };
+		94E6518121DF5BDE00B5B42F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9476E0E02198465F008D73DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E6517B21DF5BDE00B5B42F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,8 +53,8 @@
 			isa = PBXGroup;
 			children = (
 				94E6516621DF59BB00B5B42F /* Demo */,
-				94E6516F21DF59BB00B5B42F /* Framework */,
 				94E6517021DF59BB00B5B42F /* Sources */,
+				94E6517F21DF5BDE00B5B42F /* Framework */,
 				9476E0E42198465F008D73DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				9476E0E32198465F008D73DA /* Demo.app */,
+				94E6517E21DF5BDE00B5B42F /* Framework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,13 +81,6 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		94E6516F21DF59BB00B5B42F /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
 		94E6517021DF59BB00B5B42F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +89,27 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		94E6517F21DF5BDE00B5B42F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				94E6518021DF5BDE00B5B42F /* Framework.h */,
+				94E6518121DF5BDE00B5B42F /* Info.plist */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		94E6517921DF5BDE00B5B42F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E6518221DF5BDE00B5B42F /* Framework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9476E0E22198465F008D73DA /* Demo */ = {
@@ -103,6 +129,24 @@
 			productReference = 9476E0E32198465F008D73DA /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94E6517D21DF5BDE00B5B42F /* Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E6518321DF5BDE00B5B42F /* Build configuration list for PBXNativeTarget "Framework" */;
+			buildPhases = (
+				94E6517921DF5BDE00B5B42F /* Headers */,
+				94E6517A21DF5BDE00B5B42F /* Sources */,
+				94E6517B21DF5BDE00B5B42F /* Frameworks */,
+				94E6517C21DF5BDE00B5B42F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Framework;
+			productName = Framework;
+			productReference = 94E6517E21DF5BDE00B5B42F /* Framework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,6 +158,9 @@
 				ORGANIZATIONNAME = maximbilan;
 				TargetAttributes = {
 					9476E0E22198465F008D73DA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					94E6517D21DF5BDE00B5B42F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -132,6 +179,7 @@
 			projectRoot = "";
 			targets = (
 				9476E0E22198465F008D73DA /* Demo */,
+				94E6517D21DF5BDE00B5B42F /* Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -147,6 +195,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94E6517C21DF5BDE00B5B42F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -157,6 +212,14 @@
 				94E6517621DF59BB00B5B42F /* AppDelegate.swift in Sources */,
 				94E6517221DF59BB00B5B42F /* ViewController.swift in Sources */,
 				94E6517821DF59BB00B5B42F /* SwiftOxfordAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E6517A21DF5BDE00B5B42F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E6518621DF5C1300B5B42F /* SwiftOxfordAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +397,62 @@
 			};
 			name = Release;
 		};
+		94E6518421DF5BDE00B5B42F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.swiftoxfordapi.Framework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94E6518521DF5BDE00B5B42F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maximbilan.swiftoxfordapi.Framework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +470,15 @@
 			buildConfigurations = (
 				9476E0F621984662008D73DA /* Debug */,
 				9476E0F721984662008D73DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E6518321DF5BDE00B5B42F /* Build configuration list for PBXNativeTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E6518421DF5BDE00B5B42F /* Debug */,
+				94E6518521DF5BDE00B5B42F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
