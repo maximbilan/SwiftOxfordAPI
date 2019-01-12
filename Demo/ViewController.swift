@@ -13,15 +13,19 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		SwiftOxfordAPI.shared.entries("en", "queen") { (data, error) in
-            if let data = data {
-                print(data)
-            } else {
-                if let localizedDescr = error?.localizedDescription {
-                    print(localizedDescr)
-                }
-            }
-		}
+        SwiftOxfordAPI.shared.entries(language: "en", word: "queen", region: "us", filters: "grammaticalFeatures=singular,past;lexicalCategory=noun") { [weak self] (data, error) in
+            self?.handleResponse(data, error)
+        }
 	}
 
+    @objc func handleResponse(_ data: [String: Any]?, _ error: Error?) {
+        if let data = data {
+            print(data)
+        } else {
+            if let localizedDescr = error?.localizedDescription {
+                print(localizedDescr)
+            }
+        }
+    }
+    
 }
