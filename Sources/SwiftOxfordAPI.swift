@@ -25,6 +25,13 @@ public class SwiftOxfordAPI {
 			static let method = "GET"
 			static let url = API.base + "/" + entries.base
 		}
+        
+        /// `translation` endpoint.
+        struct translation {
+            static let base = "entries"
+            static let method = "GET"
+            static let url = API.base + "/" + entries.base
+        }
 	}
     
 	/// App identifier.
@@ -70,7 +77,7 @@ public class SwiftOxfordAPI {
             - word: An Entry identifier. Case-sensitive.
             - region: Region filter parameter. gb = Oxford Dictionary of English. us = New Oxford American Dictionary.
             - filters: Separate filtering conditions using a semicolon. Conditions take values grammaticalFeatures and/or lexicalCategory and are case-sensitive. To list multiple values in single condition divide them with comma.
-            - completion: A completion block.
+            - completion: A completion closure.
 	*/
     public func entries(language: String, word: String, region: String? = nil, filters: String? = nil, _ completion: @escaping RequestHandler) {
         var urlString = API.entries.url + "/" + language + "/" + word.lowercased()
@@ -83,6 +90,36 @@ public class SwiftOxfordAPI {
 		performRequest(withURL: urlString, httpMethod: API.entries.method, completion)
 	}
 	
+    /**
+        Translation. Use this to return translations for a given word. In the event that a word in the dataset does not have a direct translation, the response will be a definition in the target language.
+     
+        Response Messages:
+     
+        400 - any of target languages is unknown.
+     
+        404 - no entry is found matching supplied source_lang and id and/or that entry has no senses with translations in the target language(s).
+     
+        500 - Internal Error. An error occurred while processing the data.
+     
+        - Parameters:
+            - sourceLanguage: IANA language code.
+            - word: The source word.
+            - targetLanguage: IANA language code.
+            - completion: A completion closure.
+    */
+    public func translation(sourceLanguage: String, word: String, targetLanguage: String, _ completion: @escaping RequestHandler) {
+        let urlString = API.entries.url + "/" + sourceLanguage + "/" + word.lowercased() + "/translations=" + targetLanguage
+        performRequest(withURL: urlString, httpMethod: API.entries.method, completion)
+    }
+    
+    /**
+        Performs a request.
+     
+        - Parameters:
+            - urlString: URL string.
+            - httpMethod
+            - completion: A completion closure.
+     */
     private func performRequest(withURL urlString: String, httpMethod: String, _ completion: @escaping RequestHandler) {
         guard let urlComponents = URLComponents(string: urlString) else {
             completion(nil, nil)

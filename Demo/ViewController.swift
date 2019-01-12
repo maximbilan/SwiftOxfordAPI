@@ -16,6 +16,10 @@ class ViewController: UIViewController {
         SwiftOxfordAPI.shared.entries(language: "en", word: "queen", region: "us", filters: "grammaticalFeatures=singular,past;lexicalCategory=noun") { [weak self] (data, error) in
             self?.handleResponse(data, error)
         }
+        
+        SwiftOxfordAPI.shared.translation(sourceLanguage: "en", word: "queen", targetLanguage: "es") { [weak self] (data, error) in
+            self?.handleResponse(data, error)
+        }
 	}
 
     @objc func handleResponse(_ data: [String: Any]?, _ error: Error?) {
