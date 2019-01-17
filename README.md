@@ -48,6 +48,9 @@ SwiftOxfordAPI.shared.translation(sourceLanguage: "en", word: "queen", targetLan
 
 ## To do:
 
+Unfortunately, I stopped working on this repository because I don't need it for the moment.
+It's not difficult to expand the methods, there is a list below of services which were already implemented. So, If you need more, please create a pull request with implemented services, I'll accept it.
+
 - [x] Entries
 - [x] Translation
 - [ ] Sentences
