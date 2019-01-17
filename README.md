@@ -37,7 +37,7 @@ Right now the framework supports only one request: `entries`. So, this repo is i
 ## To do:
 
 - [x] Entries
-- [ ] Translation
+- [x] Translation
 - [ ] Sentences
 - [ ] Lemmatron
 - [ ] Thesaurus
