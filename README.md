@@ -14,7 +14,7 @@ github "maximbilan/SwiftOxfordAPI"
 <b>Swift Package Manager:</b>
 <pre>
 dependencies: [
-    .package(url: "https://github.com/maximbilan/SwiftOxfordAPI", from: "0.1"))
+    .package(url: "https://github.com/maximbilan/SwiftOxfordAPI", from: "0.2"))
 ]
 </pre>
 <b>Manual:</b>
