@@ -26,13 +26,25 @@ Copy <i>SwiftOxfordAPI.swift</i> to your project.
 
 First of all you have to generate API ID and APP key.
 And then use the following code:
-<pre>
+```swift
 SwiftOxfordAPI.shared.start(appId: "APP_ID_HERE", appKey: "APP_KEY_HERE")
-</pre>
+```
 
 ## Using
 
-Right now the framework supports only one request: `entries`. So, this repo is in working progress, don't worry, will be other stuff soon.
+Right now the framework is supported only two requests: `entries` and `translation`.
+For example:
+```swift
+SwiftOxfordAPI.shared.entries(language: "en", word: "queen", region: "us", filters: "grammaticalFeatures=singular,past;lexicalCategory=noun") { [weak self] (data, error) in
+    self?.handleResponse(data, error)
+}
+```
+
+```swift
+SwiftOxfordAPI.shared.translation(sourceLanguage: "en", word: "queen", targetLanguage: "es") { [weak self] (data, error) in
+    self?.handleResponse(data, error)
+}
+```
 
 ## To do:
 
