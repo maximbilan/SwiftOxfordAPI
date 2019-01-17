@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "SwiftOxfordAPI"
-s.version      = "0.1"
+s.version      = "0.2"
 s.summary      = "SwiftOxfordAPI"
 s.description  = "A framework to consume the Oxford Dictionaries API written in Swift."
 s.homepage     = "https://github.com/maximbilan/SwiftOxfordAPI"
